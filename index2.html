@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Ahorcado</h1>
+        <p class="palabra_secreta" id="palabra_secreta">_ _ _ _ _ _ _ _</p>
+        <p>Intentos Permitidos: <strong><span id="intentos_permitidos">6</span></strong></p>
+        <div class="entrada">
+            <input type="text" id="letra" maxlength="1" placeholder="Ingresa una letra">
+            <button id="enviar">Enviar</button>
+        </div>
+    </div>
+    <div class="contenedor">
+        <h2>Puntajes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Puesto</th>
+                    <th>Nombre</th>
+                    <th>Puntaje</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="puntajes">
+                <!-- Puntajes se actualizarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>
