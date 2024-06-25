@@ -29,10 +29,18 @@
             </thead>
             <tbody id="puntajes">
                 <!-- Puntajes se actualizarán aquí -->
+                 <% for (let i = 0; i < puntajes.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= puntajes[i].nombre_usuario %></td>
+                        <td><%= puntajes[i].valor_puntaje %></td>
+                        <td><%= puntajes[i].fecha_puntaje %></td>
+                    </tr>
+                <% } %>
             </tbody>
         </table>
     </div>
 
-    <script src="sricpts/script.js"></script>
+    <!-- <script src="sricpts/script.js"></script> -->
 </body>
 </html>

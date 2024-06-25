@@ -8,6 +8,8 @@ let PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(express.json());
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.set("views", join(__dirname, "frontend/views"));
