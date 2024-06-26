@@ -64,7 +64,9 @@ export const agregarPuntaje = async (puntaje, nombre) => {
 };
 export const getPuntajes = async () => {
   try {
-    const [result] = await pool.query("SELECT * FROM puntajes");
+    const [result] = await pool.query(
+      "SELECT * FROM puntajes ORDER BY id_puntaje DESC LIMIT 5;"
+    );
     return result;
   } catch (error) {
     console.error(error);

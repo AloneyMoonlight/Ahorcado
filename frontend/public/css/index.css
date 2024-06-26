@@ -36,7 +36,8 @@ body{
     border: none;
     outline: none;
     font-size: 1.2rem;
-    border-radius: 1rem 0 0 1rem;
+    /* border-radius: 1rem 0 0 1rem; */
+    border-radius: 1rem;
 }
 .entrada button{
     padding: .5rem 1rem;

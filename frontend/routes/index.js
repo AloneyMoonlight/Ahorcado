@@ -13,12 +13,21 @@ async function palabraRandomm() {
 
 indexRouter.get("/", async (req, res) => {
   let puntajes = await getPuntajes();
+  if (puntajes.length == 0) {
+    puntajes = [
+      {
+        nombre_usuario: "No hay puntajes",
+        valor_puntaje: 0,
+        fecha_puntaje: "0000-00-00",
+      },
+    ];
+  }
   res.render("index", { puntajes });
 });
 
 indexRouter.get("/palabraRandom", async (req, res) => {
   let palabra = await palabraRandomm();
-  res.send(palabra[0].texto);
+  res.send(palabra);
 });
 
 indexRouter.post("/agregarPuntaje", async (req, res) => {
